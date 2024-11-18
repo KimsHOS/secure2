@@ -47,7 +47,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 
-import com.example.achalasecure.R;
+import com.achala.secure_test.R;
 import com.example.achalasecure.faceantispoofing.FaceAntiSpoofing;
 import com.example.achalasecure.mobilefacenet.MobileFaceNet;
 import com.example.achalasecure.utils.AchalaActions;

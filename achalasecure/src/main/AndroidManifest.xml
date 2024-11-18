@@ -10,7 +10,7 @@
     <application>
         <!-- Your SDK's application components -->
         <activity
-            android:name=".activity.CameraActivity"
+            android:name="com.example.achalasecure.activity.CameraActivity"
             android:exported="false" />
     </application>
 </manifest>

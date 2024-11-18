@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.achalasecure'
+    namespace 'com.achala.secure_test'
     compileSdk 34
 
     defaultConfig {
@@ -66,7 +66,7 @@ afterEvaluate{
             release(MavenPublication){
                 //from components.release
 
-                groupId = 'com.example.achalasecure'
+                groupId = 'com.achala.secure_test'
                 artifactId = 'achala-secure-library'
                 version = '1.0'
             }

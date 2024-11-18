@@ -1258,7 +1258,7 @@ public class CameraActivity extends AppCompatActivity {
     private void startBlinking(TextView view) {
         view.setVisibility(View.VISIBLE);
         faceMaskImage.setVisibility(View.VISIBLE);
-        view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
+       // view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
         animator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 1f);
         animator.setDuration(1000); // Duration for one cycle of blink (1 second)
         animator.setRepeatCount(ObjectAnimator.INFINITE); // Repeat indefinitely
@@ -1269,7 +1269,7 @@ public class CameraActivity extends AppCompatActivity {
     private void stopBlinking(TextView view) {
         view.setVisibility(View.GONE);
         faceMaskImage.setVisibility(View.GONE);
-        view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
+        //view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
         animator.cancel();
         animator = null;
     }
