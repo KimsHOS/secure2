@@ -10,8 +10,6 @@ android {
     defaultConfig {
         minSdk 24
         targetSdk 34
-        versionCode 1
-        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -67,7 +65,7 @@ afterEvaluate{
                 //from components.release
 
                 groupId = 'com.achala.secure_test'
-                artifactId = 'achala-secure-library'
+                artifactId = 'secure_test'
                 version = '1.0'
             }
         }
