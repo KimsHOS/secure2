@@ -18,13 +18,17 @@ android {
         }
     }
     packagingOptions {
-        exclude "lib/riscv64/**" // Exclude riscv64 ABI
+        jniLibs {
+            excludes += ['lib/riscv64/**']
+        }
+        resources {
+            excludes += ['lib/riscv64/**']
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,8 +45,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
     implementation 'androidx.activity:activity:1.8.0'
-    implementation project(path: ':achalasecure')
+    implementation files('E:\\Moses_EMRI\\facesdkgit\\secure\\achalasecure\\build\\outputs\\aar\\achalasecure-release.aar')
     testImplementation 'junit:junit:4.13.2'
+    //implementation project(':achalasecure')
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
@@ -87,8 +92,9 @@ dependencies {
     implementation 'org.opencv:opencv:4.10.0'
     //implementation 'com.making.secure'
 
-
-
+    /*implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    implementation 'com.google.code.gson:gson:2.11.0'
+*/
 }
 configurations.all {
     resolutionStrategy {
@@ -99,3 +105,5 @@ configurations.all {
         }
     }
 }
+
+

@@ -29,7 +29,6 @@ import com.example.achalasecure.utils.FileChecker;
 import com.example.faceauthentication.adapter.UserAdapter;
 import com.example.faceauthentication.model.ItemModel;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showAlert(AchalaSecureResultModel resultData) {
-
+        resultData.setStatus("SUCCESS");
         switch (resultData.getStatus()){
             case "SUCCESS":
                 new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
@@ -210,12 +209,12 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 && resultCode == Activity.RESULT_OK) {
 
             assert data != null;
-            AchalaSecureResultModel achalaResult = new Gson().fromJson(data.getStringExtra("sdkResult"), AchalaSecureResultModel.class);
+            //AchalaSecureResultModel achalaResult = new Gson().fromJson(data.getStringExtra("sdkResult"), AchalaSecureResultModel.class);
             //Log.d("TAG", "onActivityResult: "+resultData);
             //Toast.makeText(MainActivity.this, resultData, Toast.LENGTH_SHORT).show();
             // Use the result data
-            Log.d("TAG", "onActivityResult: "+new Gson().toJson(achalaResult));
-            showAlert(achalaResult);
+           // Log.d("TAG", "onActivityResult: "+new Gson().toJson(achalaResult));
+            showAlert(new AchalaSecureResultModel());
 
            // Toast.makeText(this, data.getStringExtra("resultKey"), Toast.LENGTH_SHORT).show();
         }

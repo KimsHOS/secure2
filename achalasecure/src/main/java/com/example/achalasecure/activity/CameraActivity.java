@@ -133,10 +133,11 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera_lib);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.white)); // Replace with your color
+        setContentView(com.example.achalasecure.R.layout.activity_camera_lib);
+        getWindow().setStatusBarColor(getResources().getColor(com.example.achalasecure.R.color.white)); // Replace with your color
 
         // Set the icons color to dark
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
@@ -157,14 +158,14 @@ public class CameraActivity extends AppCompatActivity {
 
 
 
-        previewView = findViewById(R.id.preview_view);
-        instructionToUser = findViewById(R.id.to_user);
-        instructionToUser1 = findViewById(R.id.to_user1);
-        liveDetection = findViewById(R.id.live_detection);
-        spoofingDetected = findViewById(R.id.spoofing_detected);
-        faceMaskImage = findViewById(R.id.face_mask_image);
+        previewView = findViewById(com.example.achalasecure.R.id.preview_view);
+        instructionToUser = findViewById(com.example.achalasecure.R.id.to_user);
+        instructionToUser1 = findViewById(com.example.achalasecure.R.id.to_user1);
+        liveDetection = findViewById(com.example.achalasecure.R.id.live_detection);
+        spoofingDetected = findViewById(com.example.achalasecure.R.id.spoofing_detected);
+        faceMaskImage = findViewById(com.example.achalasecure.R.id.face_mask_image);
         previewView.setScaleX(-1);
-        closeCamera = findViewById(R.id.close_camera);
+        closeCamera = findViewById(com.example.achalasecure.R.id.close_camera);
         cameraExecutor = Executors.newSingleThreadExecutor();
         if(!isRegistration) {
             if (!achalaSdkConfigurations.getVerifyImageURL().isEmpty())
@@ -487,12 +488,12 @@ public class CameraActivity extends AppCompatActivity {
                 if (animator != null)
                     stopBlinking(spoofingDetected);
                 text = text + "，" + "True";
-                // resultTextView.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+                // resultTextView.setTextColor(getResources().getColor(android.com.example.achalasecure.R.color.holo_green_light));
                 return true;
             } else {
                 text = text + "，" + "False";
                 startBlinking(spoofingDetected);
-                //resultTextView.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+                //resultTextView.setTextColor(getResources().getColor(android.com.example.achalasecure.R.color.holo_red_light));
                 return false;
             }
             // text = text + "。耗时" + (end - start);
@@ -1344,7 +1345,7 @@ public class CameraActivity extends AppCompatActivity {
             text = text + "，" + "False";
             //saveFailedBitmap(bitmapCrop2);
             achalaSecureCallback.onCompareFailed("Unknown");
-            //resultTextView.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+            //resultTextView.setTextColor(getResources().getColor(android.com.example.achalasecure.R.color.holo_red_light));
         }
         Log.d("TAG", "faceCompare_mfn: "+same);
 
@@ -1377,7 +1378,7 @@ public class CameraActivity extends AppCompatActivity {
     private void startBlinking(TextView view) {
         view.setVisibility(View.VISIBLE);
         faceMaskImage.setVisibility(View.VISIBLE);
-        view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
+        view.setTextColor(getColor(com.example.achalasecure.R.color.purple_200));
         animator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 1f);
         animator.setDuration(1000); // Duration for one cycle of blink (1 second)
         animator.setRepeatCount(ObjectAnimator.INFINITE); // Repeat indefinitely
@@ -1388,7 +1389,7 @@ public class CameraActivity extends AppCompatActivity {
     private void stopBlinking(TextView view) {
         view.setVisibility(View.GONE);
         faceMaskImage.setVisibility(View.GONE);
-        view.setTextColor(getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color));
+        view.setTextColor(getColor(com.example.achalasecure.R.color.purple_200));
         animator.cancel();
         animator = null;
     }
