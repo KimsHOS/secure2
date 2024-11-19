@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.KimsHOS</groupId>
-    <artifactId>secure_test</artifactId>
+    <artifactId>achalasecure</artifactId>
     <version>1.0.9</version>
     <packaging>pom</packaging>
     <description>Secure Library</description>
