@@ -6,7 +6,7 @@
     <groupId>com.github.KimsHOS</groupId>
     <artifactId>achalasecure1</artifactId>
     <version>1.0.9</version>
-    <packaging>aar</packaging>
+    <packaging>pom</packaging>
     <description>Secure Library</description>
 
     <dependencies>
