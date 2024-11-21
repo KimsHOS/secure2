@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.KimsHOS</groupId>
-    <artifactId>achalasecure1</artifactId>
+    <artifactId>achalasecure</artifactId>
     <version>1.0.9</version>
     <packaging>pom</packaging>
     <description>Camera and ML Library</description>

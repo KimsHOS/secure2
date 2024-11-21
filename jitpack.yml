@@ -8,7 +8,7 @@ before_install:
 install:
   - mvn install:install-file -Dfile=achalasecure-release1.aar \
       -DgroupId=com.github.KimsHOS \
-      -DartifactId=achalasecure1 \
+      -DartifactId=achalasecure \
       -Dversion=1.0.9 \
       -Dpackaging=aar \
       -DgeneratePom=true
