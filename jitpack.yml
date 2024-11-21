@@ -6,7 +6,7 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 
 install:
-  - mvn install:install-file -Dfile=achalasecure-release1.aar \
+  - mvn install:install-file -Dfile=achalasecure-release.aar \
       -DgroupId=com.github.KimsHOS \
       -DartifactId=achalasecure \
       -Dversion=1.0.9 \
