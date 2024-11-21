@@ -6,7 +6,7 @@
     <groupId>com.github.YourUsername</groupId>
     <artifactId>YourRepositoryName</artifactId>
     <version>1.0.9</version>
-    <packaging>aar</packaging>
+    <packaging>pom</packaging>
     <description>Camera and ML Library</description>
 
     <dependencies>
