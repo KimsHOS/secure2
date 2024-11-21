@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
-    xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.github.KimsHOS</groupId>
     <artifactId>achalasecure</artifactId>
     <version>1.0.9</version>
-    <packaging>aar</packaging> <!-- Use 'aar' since it's an Android library -->
-
+    <packaging>pom</packaging>
     <description>Secure Library</description>
 
     <dependencies>
-        <!-- CameraX Dependencies -->
+        <!-- CameraX dependencies -->
         <dependency>
             <groupId>androidx.camera</groupId>
             <artifactId>camera-core</artifactId>
@@ -44,7 +42,7 @@
             <version>1.3.4</version>
         </dependency>
 
-        <!-- Google ML Kit -->
+        <!-- ML Kit dependencies -->
         <dependency>
             <groupId>com.google.mlkit</groupId>
             <artifactId>face-detection</artifactId>
@@ -56,7 +54,7 @@
             <version>17.0.2</version>
         </dependency>
 
-        <!-- TensorFlow Lite -->
+        <!-- TensorFlow dependencies -->
         <dependency>
             <groupId>org.tensorflow</groupId>
             <artifactId>tensorflow-lite</artifactId>
@@ -78,25 +76,25 @@
             <version>0.4.2</version>
         </dependency>
 
-        <!-- Gson -->
+        <!-- Gson dependency -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.11.0</version>
         </dependency>
 
-        <!-- SweetAlert Library -->
-        <dependency>
-            <groupId>com.github.f0ris.sweetalert</groupId>
-            <artifactId>library</artifactId>
-            <version>1.5.1</version>
-        </dependency>
-
-        <!-- OpenCV -->
+        <!-- OpenCV dependency -->
         <dependency>
             <groupId>org.opencv</groupId>
             <artifactId>opencv</artifactId>
             <version>4.10.0</version>
+        </dependency>
+
+        <!-- SweetAlert dependency -->
+        <dependency>
+            <groupId>com.github.f0ris.sweetalert</groupId>
+            <artifactId>library</artifactId>
+            <version>1.5.1</version>
         </dependency>
     </dependencies>
 </project>
