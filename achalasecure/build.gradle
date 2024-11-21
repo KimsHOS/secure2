@@ -62,7 +62,6 @@ afterEvaluate{
         publications {
             release(MavenPublication){
                 //from components.release
-
                 groupId = 'com.example.achalasecure'
                 artifactId = 'achalasecure1'
                 version = '1.0'
