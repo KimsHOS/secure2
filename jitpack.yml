@@ -8,9 +8,11 @@ install:
   # Install required dependencies and build
   - mvn clean install -DskipTests
 
+  # Check if .aar file exists
+  - if [ -f "achalasecure-release.aar" ]; then echo ".aar file exists"; else echo ".aar file not found"; exit 1; fi
+
   # Prepare and install the .aar file to the local Maven repository
-  - FILE="-Dfile=achalasecure-release.aar"
-  - mvn install:install-file $FILE \
+  - mvn install:install-file -Dfile=achalasecure-release.aar \
     -DgroupId=com.github.KimsHOS \
     -DartifactId=achalasecure \
     -Dversion=1.0.9 \
