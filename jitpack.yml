@@ -4,6 +4,7 @@ jdk:
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
+  - mvn clean install -DskipTests
   - FILE="-Dfile=achalasecure-release.aar"
   - mvn install:install-file $FILE -DgroupId=com.github.KimsHOS -DartifactId=achalasecure -Dversion=1.0.9 -Dpackaging=aar -DgeneratePom=true
 
