@@ -20,8 +20,13 @@
             <id>mavenCentral</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
+        <repository>
+            <id>jitpack</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
+    <!-- Dependencies Section -->
     <dependencies>
         <dependency>
             <groupId>androidx.camera</groupId>
@@ -97,6 +102,11 @@
             <groupId>org.opencv</groupId>
             <artifactId>opencv</artifactId>
             <version>4.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.KimsHOS</groupId>
+            <artifactId>secure1</artifactId>
+            <version>1.1.5</version>
         </dependency>
     </dependencies>
 </project>
